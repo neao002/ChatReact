@@ -1,6 +1,8 @@
 // import and install npm for chat
 import { ChatEngine } from "react-chat-engine";
 
+import ChatFeed from "./Components/ChatFeed";
+
 import "./App.css";
 
 const App = () => {
@@ -10,6 +12,7 @@ const App = () => {
       projectID="d0e35330-ac73-42f7-9d22-598cf64983f3"
       userName="nico"
       userSecret="1"
+      renderChatFeed={(chatAppProps) => <ChatFeed {...chatAppProps} />}
     />
   );
 };
