@@ -1,14 +1,14 @@
 import React from "react";
 
-const MessageForm = ({ message }) => {
-  if (message?.attachments?.lenght > 0) {
+const MyMessage = ({ message }) => {
+  if (message.attachments && message.attachments.length > 0) {
     return (
       <img
         src={message.attachments[0].file}
         alt="message-attachment"
         className="message-image"
         style={{ float: "right" }}
-      ></img>
+      />
     );
   }
 
@@ -19,13 +19,12 @@ const MessageForm = ({ message }) => {
         float: "right",
         marginRight: "18px",
         color: "white",
-        backgroundColor: "#3b2a50",
+        backgroundColor: "#3B2A50",
       }}
     >
-      {" "}
       {message.text}
     </div>
   );
 };
 
-export default MessageForm;
+export default MyMessage;
